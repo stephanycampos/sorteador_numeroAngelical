@@ -1,49 +1,75 @@
-@fontePrincipal: Reboto, sans-serif;
-@CordeFundo: #2d3436;
-@CorDoTexto: #fff;
+// Variáveis
+@cor-fundo-gradient-top: #2d0b48;
+@cor-fundo-gradient-bottom: #000000;
+@cor-principal: #4a148c;
+@cor-hover: #6a1b9a;
+@cor-botao: #8e24aa;
+@cor-texto: white;
+@cor-titulo: #f3e5f5;
+@cor-numero: #fff176;
+@cor-mensagem: #e1bee7;
+@cor-box: #ffe57f;
 
 body {
-  background: @CordeFundo;
-  font-family: @fontePrincipal;
-  color: @CorDoTexto;
+  background: linear-gradient(to bottom, @cor-fundo-gradient-top, @cor-fundo-gradient-bottom);
+  color: @cor-texto;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
-.icon {
-  width: 80px; 
-  height: 90px;
-  display: block;
-  margin: 0 auto 10px auto;
+main {
+  text-align: center;
 }
 
-.container {
-  background: @CordeFundo;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: @cor-titulo;
 }
 
-.options label {
-  display: block;
-  margin: 10px 0;
-}
+.resultado {
+  background: @cor-principal;
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  width: 300px;
+  margin: 0 auto 20px;
+  color: @cor-box;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
 
-#password {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 1.2em;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .numero {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: @cor-numero;
+  }
+
+  .mensagem {
+    font-size: 1rem;
+    color: @cor-mensagem;
+  }
 }
 
 button {
-    padding: 3px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9em;
-    margin-top: 4px;
-    border-radius: 5px;
-    background-color: rgb(88, 233, 88);
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: @cor-botao;
+  color: @cor-texto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: @cor-hover;
+  }
 }
